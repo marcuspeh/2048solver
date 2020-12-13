@@ -58,7 +58,7 @@ def AI(mat):
                 moves += 1
             grid[firstmove].append(score)
         return grid
-    number_of_tries = 350
+    number_of_tries = 350 # increase the number_of_tries to increase accuracy
     grid = random_move(number_of_tries, mat)
     for i in grid.keys():
         try:
@@ -72,9 +72,6 @@ def AI(mat):
     grid = sorted(grid.items(), key = lambda x: x[1], reverse = True)
     return grid[0][0]
 
-             
-
-#print(AI([[0, 4, 256, 4], [16, 2, 8, 512], [8, 4, 128, 16], [2, 64, 8, 2]]))
 
 # UNCOMMENT THE FOLLOWING LINES AND RUN TO WATCH YOUR SOLVER AT WORK
 #game_logic['AI'] = AI
